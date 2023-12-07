@@ -1,0 +1,10 @@
+celery>=5.1 
+Django==4.1 # gapped to 4.1 by drf-yasg
+django-allauth>=0.58
+django-cors-headers>=4.3
+djangorestframework>=3.14
+drf-yasg>=1.21.7,<2.0.0
+gunicorn>=20.0
+psycopg2-binary>=2.8 
+redis>=3.5 
+whitenoise>=5.2
