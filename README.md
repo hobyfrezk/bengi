@@ -13,6 +13,13 @@ pip install -r requirements.txt
 
 run local server
 ```bash
-python src/manage.py runserver
-python src/manage.py tailwind start
+python app/manage.py runserver
+python app/manage.py tailwind start
+
+"""
+handy command
+"""
+# create new app
+cd app
+python manage.py startapp appname
 ```

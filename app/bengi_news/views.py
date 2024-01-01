@@ -3,4 +3,4 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, "theme/base.html")
+    return render(request, "bengi_news/index.html")

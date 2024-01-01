@@ -1,0 +1,6 @@
+{% extends 'theme/base.html' %} {% block content %}
+{% include 'ui/nav_bar.html' %}
+{% include 'ui/side_bar.html' %}
+<main id="dynamic-content">{% block dynamic_content %}{% endblock %}</main>
+{% include 'ui/footer.html' %}
+{% endblock %}
