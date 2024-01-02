@@ -1,4 +1,27 @@
-{% extends 'ui/base.html' %}
-{% block dynamic_content %}
-<h1>bengi news</h1>
+{% extends 'ui/base.html' %} {% block dynamic_content %}
+<script src="https://unpkg.com/htmx.org@1.6.1"></script>
+
+<div id="search-bar">
+  <form
+    id="search-form"
+    hx-get="/fetch-news/"
+    hx-trigger="keyup delay:1ms"
+    hx-indicator="#loading-indicator"
+    hx-target="#news-section"
+    hx-swap="outerHTML"
+  >
+    <input
+      type="text"
+      id="search-input"
+      name="query"
+      placeholder="Search news..."
+    />
+  </form>
+</div>
+<div
+  id="news-section"
+  hx-get="/fetch-news/"
+  hx-trigger="load"
+  hx-swap="outerHTML"
+></div>
 {% endblock %}
