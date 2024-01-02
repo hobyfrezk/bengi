@@ -1,11 +1,10 @@
 {% extends 'ui/base.html' %} {% block dynamic_content %}
-<script src="https://unpkg.com/htmx.org@1.6.1"></script>
 
 <div id="search-bar">
   <form
     id="search-form"
     hx-get="/fetch-news/"
-    hx-trigger="keyup delay:1ms"
+    hx-trigger="keyup delay:1ms, every 3s"
     hx-indicator="#loading-indicator"
     hx-target="#news-section"
     hx-swap="outerHTML"
