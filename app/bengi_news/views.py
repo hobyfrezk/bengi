@@ -10,7 +10,7 @@ def fetch_news(request):
     # get query from url
     query = request.GET.get("query", "")
 
-    news_list = News.objects.filter(title__icontains=query)
+    news_list = News.objects.filter(title__icontains=query).order_by("-pub_date")
 
     context = {"news_list": news_list}
     # render news as cards
