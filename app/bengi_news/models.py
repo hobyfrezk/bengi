@@ -7,6 +7,7 @@ class Image(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     image = models.ImageField(upload_to="images/")
+    news = models.ForeignKey("News", related_name="images", on_delete=models.CASCADE)
 
     def __str__(self):
         return self.image.url
@@ -32,7 +33,6 @@ class News(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
     pub_date = models.DateTimeField("date published")
-    images = models.ManyToManyField(Image)
     main_image = models.ForeignKey(
         Image,
         related_name="news_main_image",
