@@ -5,8 +5,6 @@ page_routes = [
     path("", views.index, name="index"),
 ]
 
-htmx_routes = [
-    path('fetch-news/', views.fetch_news, name='fetch-news'),
-]
+htmx_routes = []
 
 urlpatterns = page_routes + htmx_routes
