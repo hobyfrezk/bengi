@@ -62,6 +62,9 @@ MIDDLEWARE = [
     "django_browser_reload.middleware.BrowserReloadMiddleware",  # required by tailwind
 ]
 
+MEDIA_ROOT = BASE_DIR / "media"
+MEDIA_URL = "/app/media/"
+
 ROOT_URLCONF = "app.urls"
 
 TEMPLATES = [
