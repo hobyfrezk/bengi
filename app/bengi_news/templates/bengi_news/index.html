@@ -1,27 +1,4 @@
-{% extends 'ui/base.html' %} {% block dynamic_content %}
-
-<div id="search-bar">
-  <form
-    id="search-form"
-    hx-get="/fetch-news/"
-    hx-trigger="keyup delay:1ms, every 3s"
-    hx-indicator="#loading-indicator"
-    hx-target="#news-section"
-    hx-swap="outerHTML"
-  >
-    <input
-      type="text"
-      id="search-input"
-      name="query"
-      placeholder="Search news..."
-      class="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none m-4"
-    />
-  </form>
-</div>
-<div
-  id="news-section"
-  hx-get="/fetch-news/"
-  hx-trigger="load"
-  hx-swap="outerHTML"
-></div>
+{% extends 'ui/base.html' %}
+{% block dynamic_content %}
+<h1>bengi news</h1>
 {% endblock %}
